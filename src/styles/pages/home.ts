@@ -1,63 +1,101 @@
 import { styled } from "..";
 
-export const HomeContainer = styled('main', {
-  display: 'flex',
-  width: '100%',
-  maxWidth: 'calc(100vw - ((100vw - 1180px) / 2))',
-  marginLeft: 'auto',
-  minHeight: 656
-})
+export const HomeContainer = styled("main", {
+  display: "flex",
+  width: "100%",
+  maxWidth: "calc(100vw - ((100vw - 1180px) / 2))",
+  marginLeft: "auto",
+  minHeight: 656,
 
-export const Product = styled('div', {
-  background: 'linear-gradient(180deg, #1ea483 0%, #7465d4 100%)',
+  "@md": {
+    maxWidth: "100vw",
+    marginLeft: 0,
+    paddingLeft: "1rem",
+  },
+
+  "@sm": {
+    minHeight: "auto",
+    paddingLeft: "0.5rem",
+  },
+});
+
+export const Product = styled("div", {
+  background: "linear-gradient(180deg, #1ea483 0%, #7465d4 100%)",
   borderRadius: 8,
-  cursor: 'pointer',
-  position: 'relative',
-  overflow: 'hidden',
+  cursor: "pointer",
+  position: "relative",
+  overflow: "hidden",
 
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+
+  "@sm": {
+    minWidth: "280px",
+    width: "280px",
+  },
 
   img: {
-    objectFit: 'cover'
+    objectFit: "cover",
+
+    "@sm": {
+      width: "100%",
+      height: "auto",
+    },
   },
 
   footer: {
-    position: 'absolute',
-    bottom: '0.25rem',
-    left: '0.25rem',
-    right: '0.25rem',
-    padding: '2rem',
+    position: "absolute",
+    bottom: "0.25rem",
+    left: "0.25rem",
+    right: "0.25rem",
+    padding: "2rem",
 
     borderRadius: 6,
 
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
 
-    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    backgroundColor: "rgba(0, 0, 0, 0.6)",
 
-    transform: 'translateY(110%)',
+    transform: "translateY(110%)",
     opacity: 0,
-    transition: 'all 0.2s ease-in-out',
+    transition: "all 0.2s ease-in-out",
+
+    "@sm": {
+      padding: "1rem",
+      flexDirection: "column",
+      alignItems: "flex-start",
+      gap: "0.5rem",
+      transform: "translateY(0%)",
+      opacity: 1,
+    },
 
     strong: {
-      fontSize: '$lg',
-      color: '$gray100',
+      fontSize: "$lg",
+      color: "$gray100",
+
+      "@sm": {
+        fontSize: "$md",
+      },
     },
 
     span: {
-      fontSize: '$xl',
-      fontWeight: 'bold',
-      color: '$green300'
+      fontSize: "$xl",
+      fontWeight: "bold",
+      color: "$green300",
+
+      "@sm": {
+        fontSize: "$lg",
+      },
     },
   },
 
-  '&:hover': {
+  "&:hover": {
     footer: {
-      transform: 'translateY(0%)',
-      opacity: 1
-    }
-  }
-})
+      transform: "translateY(0%)",
+      opacity: 1,
+    },
+  },
+});

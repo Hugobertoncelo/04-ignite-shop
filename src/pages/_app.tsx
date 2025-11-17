@@ -1,23 +1,27 @@
-import { AppProps } from "next/app"
-import { globalStyles } from "../styles/global"
+import { AppProps } from "next/app";
+import { globalStyles } from "../styles/global";
+import "../styles/responsive.css";
 
-import logoImg from "../assets/logo.svg"
-import { Container, Header } from "../styles/pages/app"
+import logoImg from "../assets/logo.svg";
+import { Container, Header } from "../styles/pages/app";
 
-import Image from "next/image"
+import Image from "next/image";
+import Link from "next/link";
 
-globalStyles()
+globalStyles();
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <Container>
       <Header>
-        <Image src={logoImg} alt="" />
+        <Link href="/">
+          <Image src={logoImg} alt="Ignite Shop" />
+        </Link>
       </Header>
 
       <Component {...pageProps} />
     </Container>
-  )
+  );
 }
 
-export default App
+export default App;

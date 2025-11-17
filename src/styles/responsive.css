@@ -1,0 +1,45 @@
+.keen-slider {
+  overflow: visible !important;
+}
+
+@media (max-width: 768px) {
+  .keen-slider__slide {
+    min-width: 280px !important;
+    width: 280px !important;
+  }
+
+  .keen-slider {
+    touch-action: pan-x;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  * {
+    max-width: 100%;
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+@media (max-width: 320px) {
+  .keen-slider__slide {
+    min-width: 260px !important;
+    width: 260px !important;
+  }
+}
